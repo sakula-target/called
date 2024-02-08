@@ -1,1 +1,10 @@
+name: called
+on:
+  workflow_call:
+  workflow_dispatch:
 
+jobs:
+  called-job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo ${{toJson(github)}}
